@@ -1,7 +1,164 @@
 /* Importing Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Resetting default styles and setting font */
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppons', sans-serif;
-    
+}
+
+/* Body background color */
+body {
+    background: black;
+}
+
+/* Main wrapper for the sidebar */
+.wrapper {
+    height: 100%;
+    width: 330px;
+    position: relative;
+}
+
+/* Hide the checkbox used for toggling the sidebar */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Hamburger menu button styling */
+.wrapper .menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    z-index: 999;
+    color: #f2f2f2;
+    background: #4a4a4a;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+/* Position the menu button when sidebar is visible */
+#btn:checked ~ .menu-btn {
+    left: 247px;
+}
+
+/* Change hamburger icon to "X" when clicked */
+#btn:checked ~ .menu-btn i:before {
+    content: "\f00d"; /* FontAwesome 'times' icon */
+}
+
+/* Sidebar container styling */
+.wrapper #sidebar {
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    background: #404040;
+    overflow: hidden;
+    left: -270px; /* Hide off-screen by default */
+    transition: left 0.4s ease;
+}
+
+/* Reveal the sidebar when checkbox is checked */
+#btn:checked ~ #sidebar {
+    left: 0px;
+}
+
+/* Sidebar title section */
+#sidebar .title {
+    color: #f2f2f2;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    background: #333;
+    text-align: center;
+}
+
+
+/* Sidebar menu list styling */
+#sidebar .list-items {
+    position: relative;
+    background: #404040;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+/* Individual menu items */
+#sidebar .list-items li {
+    padding-left: 40px;
+    line-height: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for menu items */
+#sidebar .list-items li:hover {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 10px 3px #222;
+}
+
+/* Link styling for items */
+#sidebar .list-items li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* Icon spacing within menu items */
+#sidebar .list-items li a i {
+    margin-right: 20px;
+}
+
+/* Social media icon container */
+#sidebar .list-items .icons {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual social icon styles */
+#sidebar .list-items .icons a {
+    margin: 0 5px;
+    color: #f2f2f2;
+    display: block;
+    height: 40px;
+    width: 40px;
+
+    border: 1px solid #383838;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover background colors for each icon */
+#fb:hover {
+    background: royalblue;
+}
+#x:hover {
+    background: black;
+}
+#gt:hover {
+    background: black;
+}
+#yt:hover {
+    background: red;
 }
