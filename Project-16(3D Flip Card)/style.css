@@ -1,0 +1,124 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen center-aligned layout with background gradient */
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+/* Container providing perspective for 3D transform */
+.container {
+    perspective: 1000px;
+}
+
+/* Flip effect when hovering over container */
+.container:hover .wrapper {
+    transform: rotateY(180deg);
+}
+
+/* Wrapper that allows 3D rotation */
+.wrapper {
+    height: 400px;
+    width: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    
+}
+
+/* Card base style (both front and back face) */
+.card {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Front face image style */
+.wrapper .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Back face of the card (flipped) */
+.wrapper .back-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: rotateY(180deg); /* Makes it visible when flipped */
+}
+
+/* Profile image on back face */
+.wrapper .back-face img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+/* Info container on the back face */
+.wrapper .back-face .info {
+    text-align: center;
+}
+
+/* Title (name) styling */
+.back-face .info .title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* Social media icons container */
+.back-face ul {
+    display: flex;
+}
+
+/* Social media icon styles */
+.back-face ul a {
+    color: #fff;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #1cc7d0;
+    text-align: center;
+    border: 2px solid transparent;
+    line-height: 38px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+/* Hover styles for each social icon */
+#fb:hover {
+    background: royalblue;
+    border-color: #fff;
+}
+#x:hover {
+    background: black;
+    border-color: #fff;
+}
+#ig:hover {
+    background: #E4405F;
+    border-color: #fff;
+}
+#yt:hover {
+    background: red;
+    border-color: #fff;
+}
