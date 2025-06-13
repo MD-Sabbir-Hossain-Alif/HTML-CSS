@@ -1,0 +1,99 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Resetting default margin and padding, setting box-sizing and base font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling the body to center the navigation bar */
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+/* Navigation container styling */
+nav {
+    width: 600px;
+    height: 60px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); /* Soft drop shadow */
+}
+
+/* Styling each label inside the nav (acts like a tab) */
+nav label {
+    width: 100%;
+    height: 100%;
+    line-height: 60px; /* Vertically center text */
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #8e44ad; /* Purple text */
+    position: relative;
+    cursor: pointer;
+    z-index: 1; /* Ensure it's above the slider */
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for labels */
+nav label:hover {
+    background: rgba(142, 68, 173, 0.3); /* Light purple background */
+}
+
+/* Space between icon and text */
+nav label i {
+    margin-right: 4px;
+}
+
+/* Slider styling – this is the animated background for active tab */
+nav .slider {
+    position: absolute;
+    height: 100%;
+    width: 20%; /* Since there are 5 tabs, each takes 20% width */
+    background: #8e44ad; /* Solid purple */
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy transition */
+    z-index: 0; /* Behind the labels */
+}
+
+/* Change text color to white when respective radio is selected */
+#home:checked ~ nav label.home, 
+#blog:checked ~ nav label.blog, 
+#code:checked ~ nav label.code, 
+#help:checked ~ nav label.help, 
+#about:checked ~ nav label.about {
+    color: #fff;
+}
+
+/* Move slider to respective position based on radio input */
+#blog:checked ~ nav .slider {
+    left: 20%;
+}
+#code:checked ~ nav .slider {
+    left: 40%;
+}
+#help:checked ~ nav .slider {
+    left: 60%;
+}
+#about:checked ~ nav .slider {
+    left: 80%;
+}
+
+/* Hide the radio buttons */
+input[type=radio]{
+    display: none;
+}
