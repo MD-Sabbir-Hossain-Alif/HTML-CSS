@@ -1,0 +1,200 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* Reset default margin and padding, and apply box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Set body and html to center contents using grid */
+html, body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: #802edd; /* Background color for the entire page */
+}
+
+/* Main container styling */
+.main_div {
+    width: 365px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+/* Title text styling */
+.main_div .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    
+}
+
+/* Social media icons container */
+.main_div .social_icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Social media icon anchor tag styling */
+.social_icons a {
+    display: block;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    /* background: red; */
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
+
+/* Styling for span inside social icons (text next to icon) */
+.social_icons span {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+/* Facebook button styling */
+.social_icons a:first-child {
+    margin-right: 5px;
+    background: #4267b2;
+}
+
+/* Facebook button hover effect */
+.social_icons a:first-child:hover {
+    background: #304c85;
+}
+
+/* Twitter button styling */
+.social_icons a:last-child {
+    margin-right: 5px;
+    background: #1da1f2;
+}
+
+/* Twitter button hover effect */
+.social_icons a:last-child:hover {
+    background: #1e7fbc;
+}
+
+/* Form element spacing from social icons */
+form {
+    margin-top: 25px;
+}
+
+/* Input field container styling */
+form .input_box {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+    /* background: red; */
+}
+
+/* Input fields inside form */
+.input_box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 45px; /* To leave space for icon */
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    transition: all 0.3s ease;
+}
+
+/* Highlight border on input focus */
+.input_box input:focus {
+    border: 1px solid #802edd;
+}
+
+/* Icon positioning inside input fields */
+.input_box .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+/* Checkbox and forgot password options */
+form .option {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Align checkbox with text */
+.option .check_box {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for option text (remember me) */
+.option span {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Forgot password link styling */
+.option .forget a{
+    font-size: 16px;
+    color: #802edd;
+}
+
+/* Submit button styling */
+.button input {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    padding-left: 0;
+    background: #802edd;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+/* Submit button hover effect */
+.button input:hover {
+    background: #56199d;
+}
+
+/* Sign up link positioning */
+form .sign_up {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Sign up link styling */
+.sign_up a {
+    color: #802edd;
+}
+
+/* Remove underline from all form links */
+form a {
+    text-decoration: none;
+}
+
+/* Add underline on hover for form links */
+form a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design: adjust main_div on small screens */
+@media screen and (max-width: 400px) {
+    .main_div{
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* this is awesome */
