@@ -1,0 +1,172 @@
+
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset and apply base font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Centering the entire layout in the viewport */
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: royalblue;
+}
+
+/* Container for all profile icons */
+.container {
+    height: 400px;
+    min-width: 400px;
+    /* background: gray; */
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Wrapper for each circular icon */
+.icon-image {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for image inside each icon */
+.icon-image img {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid royalblue;
+}
+
+/* Hover popup card styling */
+.hover-image {
+    position: absolute;
+    height: 350px;
+    width: 300px;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    transition: transform 0.5s, z-index 0s, left 0.5s;
+    transition-delay: 0s, 0.5s, 0.5s;
+    pointer-events: none; /* Prevent accidental hover/click */
+}
+
+/* Hover state: move and raise hover card */
+.icon-image:hover .hover-image {
+    left: -200px;
+    z-index: 12;
+    transform: translateX(80px);
+    transition: left 0.5s, z-index 0s, transform 0.5s;
+    transition-delay: 0s, 0.5s, 0.5s;
+}
+
+/* Image inside the hover card */
+.hover-image img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 25px;
+}
+
+/* Content box below image in hover card */
+.content {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    padding: 0 10px;
+}
+
+/* Triangle below content box (chat-bubble style) */
+.content::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+/* Profile details inside the popup */
+.content .details {
+    position: relative;
+    background: #00d9ff;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Show details with delay when hovered */
+.icon-image:hover .details {
+    transition: all 0.5s ease;
+    transition-delay: 0.9s;
+    opacity: 1;
+    transform: translateY(4px);
+
+}
+
+
+/* Triangle below the detail box (blue) */
+.content .details::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #00d9ff;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+/* Name styling */
+.details .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Job title styling */
+.details .job {
+    font-size: 17px;
+    color: #000000;
+    margin: -3px 0 5px 0;
+}
+
+/* Remove transitions for last element to avoid lagging effect */
+.last .hover-image{
+    transition: none;
+
+}
+.last:hover .hover-image{
+    transition: none;
+
+}
+.last:hover .details {
+    transition-delay: 0s;
+}
