@@ -1,0 +1,199 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #61a7fe;
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #223a7a;
+    clip-path: polygon(86% 0, 100% 0, 100% 100%, 60% 100%);
+}
+
+.container {
+    z-index: 12;
+    max-width: 1050px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    margin: 0 20px;
+    box-shadow: 0 5px 10px rgba(0, 60, 255, 0.5);
+}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-right: 20px;
+}
+.content .image-box {
+    max-width: 55%;
+}
+.content .image-box img{
+    max-width: 100%;
+    margin-bottom: -7px;
+    border-radius: 15px 0 0 15px;
+}
+.content .topic {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1484fa;
+}
+
+.content form {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.input-box {
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+}
+
+.input-box input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 16px;
+    border-radius: 6px;
+    outline: none;
+    background: #cde1fa;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    background: #fff;
+    border-color: #1484fa;
+
+}
+
+.input-box input:valid {
+    background: #fff;
+}
+
+
+.input-box label {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72;
+    font-size: 15px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: transparent;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: 0;
+    left: 12px;
+    font-size: 14px;
+    color: #1484fa;
+    background: #fff;
+}
+
+.message-box {
+    min-height: 100px;
+    position: relative;
+    margin: 16px 0;
+}
+
+.message-box textarea {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    border: 2px solid transparent;
+    background: #cde1fa;
+    border-radius: 6px;
+    outline: none;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.message-box textarea:focus,
+.message-box textarea:valid {
+    border-color: #1484fa;
+    background-color: #fff;
+}
+
+.message-box label {
+    position: absolute;
+    font-size: 16px;
+    color: #636c72;
+    left: 18px;
+    top: 6px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.message-box textarea:focus ~ label,
+.message-box textarea:valid ~ label {
+    left: 12px;
+    top: -10px;
+    font-size: 14px;
+    color: #1484fa;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.input-box input[type="submit"] {
+    padding-left: 0;
+    color: #fff;
+    background: #1484fa;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.input-box input[type="submit"]:hover {
+    background: #186fc0;
+}
+
+@media (max-width: 1000px) {
+    .content .image-box{
+        max-width: 70%;
+    }
+    .content{
+        padding: 10px 0;
+    }
+}
+@media (max-width: 900px) {
+    .content .image-box{
+        display: none;
+    }
+    .content form{
+        width: 100%;
+        margin-right: 30px;
+    }
+}
