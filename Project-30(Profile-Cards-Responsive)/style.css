@@ -1,0 +1,151 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+    background: #ad4444;
+    color: #fff;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #ad4444;
+}
+
+.container {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    width: calc(33% - 10px);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.box .name {
+    margin: 10px 0 3px 0;
+    color: #ad4444;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.box .rating i{
+    font-size: 18px;
+    color: #ad4444;
+}
+
+.box p {
+    text-align: justify;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btns {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.box .image {
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    /* background: #447aad; */
+    background: #ad4444;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.box .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.btns button {
+    background: #ad4444;
+    width: 100%;
+    padding: 9px 0;
+    outline: none;
+    border: 2px solid #ad4444;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ad4444;
+    transition: all 0.3s linear;
+}
+
+.btns button:first-child {
+    background: none;
+    margin-right: 5px;
+}
+
+.btns button:last-child {
+    color: #fff;
+    /* background: none; */
+    margin-right: 5px;
+}
+
+.btns button:first-child:hover {
+    background: #b33333;
+    color: #fff;
+}
+
+.btns button:last-child:hover {
+    background: #b33333;
+}
+
+@media (max-width: 1045px) {
+    .container .box {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 710px) {
+    .container .box{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .btns {
+        flex-direction: column;
+    }
+    .btns button {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .box .image {
+        height: 120px;
+        width: 120px;
+    }
+}
