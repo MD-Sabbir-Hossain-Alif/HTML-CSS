@@ -20,17 +20,6 @@ A curated collection of creative, small-scale UI components built entirely with 
 
 ---
 
-## 📚 Table of Contents
-
-- [Live Demo](#live-demo)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## 🚀 Live Demo
 
 <h3>🔗 Project Live Previews (Open in New Tab)</h3>
@@ -78,6 +67,14 @@ A curated collection of creative, small-scale UI components built entirely with 
 
 ---
 
+## 📚 Table of Contents
+
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [Usage](#-usage)
+
+---
+
 ## ✨ Features
 
 - ✅ Clean, semantic HTML & CSS only — no frameworks
@@ -105,4 +102,3 @@ To clone and explore the project locally:
 git clone https://github.com/MD-Sabbir-Hossain-Alif/HTML-CSS.git
 cd HTML-CSS
 # Open any project folder and launch the HTML file in a browser
-
