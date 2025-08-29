@@ -1,0 +1,77 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0a2b76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 550px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 0 20px;
+}
+
+.container p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.container a {
+    position: relative;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.container a span {
+    position: absolute;
+    height: 35px;
+    min-width: 150px;
+    top: -45px;
+    left: 50%;
+    transform: translate(-40%, -20%);
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #0a2b76;
+    transition: all 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container p a:hover span {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.container p span::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #0a2b76;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    z-index: 1;
+}
