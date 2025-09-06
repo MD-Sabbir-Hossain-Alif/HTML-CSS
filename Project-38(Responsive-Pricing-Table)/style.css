@@ -1,0 +1,146 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* border: 1px solid red; */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #647df9
+}
+
+.content {
+    max-width: 1090px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.content .card {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+    background-color: #fff;
+    width: calc(33% -20px);
+    text-align: center;
+    padding: 15px 30px 30px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.content .card .top {
+    height: 130px;
+    color: #fff;
+    padding: 12px 0 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% 53%, 49% 100%, 0 53%);
+}
+
+.content .card .top .title {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.content .card .top .price-sec {
+    margin-top: -10px;
+    font-weight: 600;
+}
+
+.content .card .top .price {
+    font-size: 45px;
+}
+
+.content .card .info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.content .card .details .one {
+    margin-top: 25px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content .card .details .one::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: #ddd;
+    height: 1px;
+    left: 0;
+    top: -12px;
+    border-radius: 25px;
+}
+
+.content .card .details .one i {
+    color: #2db94d;
+}
+
+.content .card .details i.fa-times {
+    color: #cd3241;
+}
+
+.content .card button {
+    outline: none;
+    border: none;
+    height: 42px;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 3px;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.one .top,
+.one button {
+    background-color: #55cc88;
+}
+
+.two .top,
+.two button {
+    background-color: #3311aa99;
+}
+
+.three .top,
+.three button {
+    background-color: #ff55bbee;
+}
+
+.content .card button:hover {
+    opacity: 0.90;
+    transform: scale(1.03);
+}
+
+
+@media (min-width: 768px) {
+    .content .card {
+        width: calc(33% - 20px);
+        
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .content .card {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
