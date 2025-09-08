@@ -1,0 +1,95 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    transition: background 0.5s ease;
+}
+
+body {
+    background: linear-gradient(70deg, #f0f0f0, #d0d0d0);
+}
+
+body:has(#click:checked) {
+    background: linear-gradient(35deg, #000000, #434343);
+}
+
+h1 {
+    color: #7b7b7b;
+}
+
+body:has(#click:checked) h1 {
+    color: #4346c5;
+}
+
+#checkbox {
+    height: 80px;
+    width: 270px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.9);
+}
+
+#checkbox input {
+    position: relative;
+    height: 40px;
+    width: 90px;
+    background-color: #e6e6e6;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#checkbox input:checked {
+    background-color: #4346c5;
+}
+
+
+#checkbox input::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    left: 0px;
+    background-image: linear-gradient(90deg, #fff, #f2f2f2, #c6c4c4, #a1a1a1);
+    border-radius: 50%;
+    transform: scale(0.85);
+    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#checkbox input:checked::before {
+    left: 49px;
+    background-image: linear-gradient(145deg, #333, #000, #222);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#text::before {
+    content: "OFF";
+    font-size: 25px;
+    font-weight: 600;
+    color: #7b7b7b;
+    transition: color 0.2s ease;
+}
+
+#click:checked~#text::before {
+    content: "ON";
+    color: #4346c5;
+    font-weight: 600;
+}
