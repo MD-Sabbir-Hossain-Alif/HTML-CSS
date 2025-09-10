@@ -10,7 +10,7 @@
 
 
 body {
-    background-color:lightskyblue;
+    background-color:#505081;
     height: 100vh;
     width: 100%;
 }
@@ -32,7 +32,7 @@ body {
     height: 150px;
     position: relative;
     font-size: 100px;
-    background-color: cornflowerblue;
+    background-color: #0f0e47;
     border-radius: 12px 12px 0 0;
     display: flex;
     justify-content: center;
@@ -44,14 +44,14 @@ body {
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: #6495ed;
+    background-color: #0f0e47;
     bottom: -10px;
     transform: rotate(45deg);
 }
 
 .wrapper .top i {
     font-size: 80px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .wrapper .bottom {
@@ -88,20 +88,20 @@ form .input-box input {
 
 form .input-box input:focus,
 form .input-box input:valid {
-    border-color: #6495ed;
-    background-color: #217eb722;
+    border-color: #0f0e47;
+    background-color: #0f0e472d;
 }
 
 form .input-box button {
     border: none;
-    background-color: #2ca6f1;
+    background-color: #0f0e47;
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
 }
 
 form .input-box button:hover {
-    background-color: #217db7;
+    background-color: #020229;
 }
 
 .bottom footer {
