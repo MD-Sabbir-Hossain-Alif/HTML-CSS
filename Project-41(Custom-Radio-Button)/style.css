@@ -1,0 +1,96 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #0047AB 0%, #0070BB 100%);
+}
+
+.card {
+    max-width: 350px;
+    width: 100%;
+    background-color: #f5ffec;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card .title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #003366;
+}
+
+.card .content {
+    margin-top: 20px;
+}
+
+.content label.box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4C516D;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.content label.box:hover {
+    background-color: #003366;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00CCFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+label.box.selected .circle::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3.3px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+label.box.selected .subject {
+    font-weight: bold;
+    color: #00CCFF;
+}
+
+label.box.selected>span:last-child {
+    color: #00CCFF;
+    font-weight: 600;
+}
+
+label.box.selected {
+    border: 2px solid #0047AB;
+    background-color: #003366;
+}

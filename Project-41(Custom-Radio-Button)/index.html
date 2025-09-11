@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sabbir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Radion Button</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="card">
+        <div class="title">Choose Your Course</div>
+        <div class="content">
+            <label for="html" class="box one">
+                <input type="radio" id="html" name="course" hidden>
+                <div class="course">
+                    <span class="circle"></span>
+                    <span class="subject">HTML & CSS</span>
+                </div>
+                <span>100$/year</span>
+            </label>
+    
+            <label for="js" class="box two">
+                <input type="radio" id="js" name="course" hidden>
+                <div class="course">
+                    <span class="circle"></span>
+                    <span class="subject">JavaScript</span>
+                </div>
+                <span>150$/year</span>
+            </label>
+    
+            <label for="php" class="box three">
+                <input type="radio" id="php" name="course" hidden>
+                <div class="course">
+                    <span class="circle"></span>
+                    <span class="subject">PHP & MySQL</span>
+                </div>
+                <span>200$/year</span>
+            </label>
+        </div>
+    </div>
+    
+    <script>
+        const boxes = document.querySelectorAll('.box input[type="radio"]');
+        boxes.forEach((radio) => {
+            radio.addEventListener('change', () => {
+                boxes.forEach((el) => el.closest('label').classList.remove('selected'));
+                if (radio.checked) {
+                    radio.closest('label').classList.add('selected');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
