@@ -1,0 +1,121 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    object-fit: cover;
+}
+body {
+    background-image: url(img/background.jpg);
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .details {
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+    border-radius: 8px 0 0 8px;
+    padding: 20px;
+    text-align: center;
+    z-index: 12;
+}
+
+.container .details .title {
+    font-size: 30px;
+    color: #024B6B;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+.container .details .stars {
+    font-size: 24px;
+    color: #028EA7;
+    margin-top: 12px;
+}
+
+.container .details .about {
+    color: #212121;
+    font-size: 18px;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+.container .details button {
+    background-color: #024B6B;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    display: inline-flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details button:hover {
+    background-color: #013850;
+    transform: scale(1.05);
+}
+
+.details button h1 {
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.container .features {
+    background-image: url(img/iphone-16.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.container .features ul {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 20px 20px 10px 40px;
+    margin-left: -500px;
+    transition: 0.3s;
+}
+
+.container .features:hover ul {
+    margin: 0;
+    z-index: 1;
+}
+
+.features ul li {
+    font-size: 24px;
+    font-weight: 500;
+    color: #212121;
+}
