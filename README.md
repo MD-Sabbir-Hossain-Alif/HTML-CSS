@@ -61,8 +61,15 @@ A curated collection of creative, small-scale UI components built entirely with 
   <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-33(Radio-Buttons)/" target="_blank">Project‑33 (Custom Radio Buttons)</a></li>
   <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-34(Animated-Share-Button)/" target="_blank">Project‑34 (Animated Share Button)</a></li>
   <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-35(Subscribe-Button)/" target="_blank">Project‑35 (Subscribe Button)</a></li>
-  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/project-36(product-cart-img)/" target="_blank">Project‑36 (Product Card with Image)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-36(Product-Cart-Image)/" target="_blank">Project‑36 (Product Card with Image)</a></li>
   <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-37(Tooltip-Animation)/" target="_blank">Project‑37 (Tooltip Hover Animation)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-38(Responsive-Pricing-Table)/" target="_blank">Project‑38 (Responsive Pricing Table)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-39(CSS-Togglr-Button)/" target="_blank">Project‑39 (CSS Togglr Button)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-40(Email-Subscibe-Box)/" target="_blank">Project‑40 (Email Subscibe Box)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-41(Custom-Radio-Button)/" target="_blank">Project‑41 (Custom Radio Button)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-42(Product-Card-Design)/" target="_blank">Project‑42 (Product Card Design)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-43(Neumorphism-Social-Icon)/" target="_blank">Project‑43 (Neumorphism Social Icon)</a></li>
+  <li><a href="https://md-sabbir-hossain-alif.github.io/HTML-CSS/Project-44(Share-Button-Animation)/" target="_blank">Project‑44 (Share Button Animation)</a></li>
 </ol>
 
 ---
