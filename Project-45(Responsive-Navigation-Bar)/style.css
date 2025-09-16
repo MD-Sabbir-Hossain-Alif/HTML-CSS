@@ -1,0 +1,130 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    color: burlywood;
+}
+
+body {
+    background-color: #CECED3 darkslateblue;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    /* font-size: 30px; */
+}
+
+nav .logo {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background-color: #6d5ed291;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    display: inline-block;
+        /* or block */
+        transition: transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.10);
+    transition: transform 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: white;
+    background-color: #3a326f;
+    
+}
+
+
+nav label.menu-btn i {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+.text h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 250px;
+}
+
+
+@media screen and (max-width: 940px) {
+
+    nav label.menu-btn i {
+        display: block;
+    }
+
+    #click:checked ~ .menu-btn i::before {
+        content: "\f00d";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #3a326f;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked ~ ul{
+        left: 0%;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active{
+        color: white;
+        /* background-color: #111; */
+    }
+
+        nav ul li a:hover {
+            transform: scale(1.10);
+        }
+
+    nav ul li a {
+        font-size: 30px;
+        background-color: #3a326f;
+        display: block;
+    }
+}
