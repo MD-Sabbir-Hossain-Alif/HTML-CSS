@@ -1,0 +1,176 @@
+/* ================================
+    Importing Google Fonts
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ================================
+    Global Reset
+================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================================
+    Body (Full-Screen Center Layout)
+================================== */
+body {
+    min-height: 100vh;
+    /* Ensures full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4070f4;
+}
+
+/* ================================
+    Search Box
+================================== */
+.input-box {
+    position: relative;
+    height: 76px;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Optional animation: expand slightly on focus */
+.input-box:focus-within {
+    transform: scale(1.02);
+}
+
+/* ================================
+    Icon & Button Shared Properties
+================================== */
+.input-box i,
+.input-box .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ================================
+    Icon
+================================== */
+.input-box i {
+    left: 15px;
+    font-size: 30px;
+    color: #4070f4;
+}
+
+/* ================================
+    Input Field
+================================== */
+.input-box input {
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    outline: none;
+    background-color: transparent;
+    padding: 0 155px 0 65px;
+    border: none;
+    color: #333;
+}
+
+/* ================================
+    Button
+================================== */
+.input-box .button {
+    right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Click Animation */
+.input-box .button.clicked {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* Hover Effect */
+.input-box .button:hover {
+    background-color: #3058d6;
+}
+
+/* ================================
+    Responsive Design
+================================== */
+
+/* 📱 Small Phones (max 480px) */
+@media screen and (max-width: 480px) {
+    .input-box {
+        height: 60px;
+        padding: 0 6px;
+        max-width: 95%;
+    }
+
+    .input-box i {
+        left: 10px;
+        font-size: 22px;
+    }
+
+    .input-box input {
+        font-size: 16px;
+        padding: 0 100px 0 45px;
+    }
+
+    .input-box .button {
+        right: 10px;
+        font-size: 13px;
+        padding: 7px 16px;
+    }
+}
+
+/* 📲 Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .input-box {
+        height: 70px;
+        max-width: 600px;
+    }
+
+    .input-box i {
+        left: 14px;
+        font-size: 26px;
+    }
+
+    .input-box input {
+        font-size: 18px;
+        padding: 0 130px 0 55px;
+    }
+
+    .input-box .button {
+        right: 14px;
+        font-size: 15px;
+        padding: 10px 24px;
+    }
+}
+
+/* 💻 Medium Screens / Small Laptops (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .input-box {
+        max-width: 750px;
+    }
+
+    .input-box input {
+        font-size: 19px;
+        padding: 0 145px 0 60px;
+    }
+
+    .input-box .button {
+        font-size: 16px;
+        padding: 11px 26px;
+    }
+}
