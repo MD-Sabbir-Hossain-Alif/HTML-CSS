@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sabbir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
+            <header>Login Form</header>
+            <form action="#">
+                <input type="text" placeholder="Enter your email or phone" required>
+                <div class="input-field">
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    <i class="fa-solid fa-eye" id="loginEye"></i>
+                </div>
+                <a href="#">Forgot password?</a>
+                <input type="button" class="button" value="Log In">
+            </form>
+            <div class="signup">
+                <span class="signup">Don't have an account?</span>
+                <label for="check">Signup</label>
+            </div>
+        </div>
+        <div class="registration form">
+            <header>Registration Form</header>
+            <form action="#">
+                <input type="text" placeholder="Enter your email or phone" required>
+                <div class="input-field">
+                    <input type="password" id="regPassword" placeholder="Create a password" required>
+                    <i class="fa-solid fa-eye" id="regEye"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    <i class="fa-solid fa-eye" id="confirmEye"></i>
+                </div>
+
+                <input type="button" class="button" value="Sign Up">
+            </form>
+            <div class="signup">
+                <span class="signup">Already have an account?</span>
+                <label for="check">Login</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        const togglePassword = (inputId, eyeId) => {
+            const input = document.getElementById(inputId);
+            const eye = document.getElementById(eyeId);
+
+            eye.addEventListener('click', () => {
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                eye.classList.toggle('fa-eye');
+                eye.classList.toggle('fa-eye-slash');
+            });
+        };
+
+        // Apply to each password field
+        togglePassword('loginPassword', 'loginEye');
+        togglePassword('regPassword', 'regEye');
+        togglePassword('confirmPassword', 'confirmEye');
+    </script>
+</body>
+</html>
