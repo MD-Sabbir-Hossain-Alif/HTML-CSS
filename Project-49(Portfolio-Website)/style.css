@@ -1,0 +1,122 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+body {
+    color: antiquewhite;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-position: top;
+    background-size: cover;
+    padding-top: 35px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #f9004d;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    color: #f9004d;
+}
+
+.login {
+    color:  #fff;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.register {
+    color:  #fff;
+    font-size: 1.2rem;
+    /* margin-right: 15px; */
+    text-decoration: none;
+    background-color: #000;
+    padding: 9px 25px;
+    border-radius: 6px;
+}
+
+.content {
+    margin-top: 10%;
+    max-width: 800px;
+}
+
+.content h3 {
+    font-size: 3.5rem;
+}
+
+.content h3 span {
+    color: #f9004d;
+    font-size: 5rem;
+}
+
+.content p {
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.link {
+    margin-top: 30px;
+}
+
+.link .hire,
+.link .github {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 20px;
+    border: 1px solid white;
+}
+
+.link .hire:hover,
+.link .github:hover {
+    color: #fff;
+    background-color: #f9004d;
+    border: 1px solid white;
+}
