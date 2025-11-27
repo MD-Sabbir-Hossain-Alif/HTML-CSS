@@ -1,0 +1,121 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: #439093;
+    transition: background-color 0.4s ease;
+}
+
+    /* 2. Typography */
+h1 {
+    font-size: 40px;
+    color: #ff6732;
+}
+
+h1 span {
+    color: #fff;
+}
+
+    /* 3. Toggle Button Wrapper */
+
+.toggle-btn {
+    position: relative;
+    width: 300px;
+    height: 155px;
+    background-color: #1e2425;
+    border-radius: 100px;
+    cursor: pointer;
+    /* Smooth animation */
+    transition: background-color 0.3s ease-in;
+}
+
+/* Active background */
+.toggle-btn.active {
+    background-color: #ff6732;
+}
+
+    /* 4. Icon Circle */
+#icons {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+/* Move circle when active */
+.toggle-btn.active #icons {
+    left: calc(100% - 120px - 20px);
+}
+
+    /* 5. Icon Styles */
+#icons i {
+    font-size: 70px;
+    color: #37465b;
+    transition: color 0.3s ease;
+    animation: scrollUpDown 1.4s ease-in-out infinite;
+    
+}
+
+.toggle-btn.active:hover #icons i {
+    animation: wobbleIcon 0.6s ease-in-out infinite;
+}
+
+.toggle-btn.active #icons i {
+    animation: none;
+    color: #ff6732;
+}
+
+/* 6. keyframes animation */
+@keyframes scrollUpDown {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes wobbleIcon {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-4px);
+    }
+    40% {
+        transform: translateX(4px);
+    }
+    60% {
+        transform: translateX(-6px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sabbir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/3.0.5/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <h1>Toggle <span>Button</span> Animation</h1>
+    <div class="toggle-btn">
+        <div id="icons">
+            <i class='bx  bxs-lock-keyhole-open'></i>
+        </div>
+    </div>
+</body>
+
+<script>
+    const toggleBtn = document.querySelector(".toggle-btn");
+    const lockIcon = document.querySelector("#icons i");
+
+    toggleBtn.addEventListener("click", () => {
+        toggleBtn.classList.toggle("active");
+
+        if (toggleBtn.classList.contains("active")) {
+            document.body.style.background = "#343b3c";
+            lockIcon.classList.replace("bxs-lock-keyhole-open", "bxs-lock-keyhole");
+        } else {
+            document.body.style.background = "#439093";
+            lockIcon.classList.replace("bxs-lock-keyhole", "bxs-lock-keyhole-open");
+        }
+    })
+</script>
+
+</html>
