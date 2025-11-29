@@ -1,0 +1,94 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #088292;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #02545f;
+    cursor: pointer;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+    max-width: 420px;
+    width: 100%;
+    background: #51e2f5;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.4);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 30px;
+}
+
+.card {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.3);
+    scroll-snap-align: start;
+}
+
+.image {
+    height: 160px;
+    width: 160px;
+    padding: 4px;
+    background: #51e2f5;
+    border-radius: 50%;
+
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+        border: 4px solid #fff;
+}
+
+.card h2 {
+    margin-top: 25px;
+    font-size: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+.card p {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
